@@ -6,7 +6,7 @@ import itemsData from './ItemData'
 
 function UserRow(props) {
   const item = props.item
-  const itemLink = `/users/${item.id}`
+  const itemLink = `/items/${item.id}`
 
   const getBadge = (status) => {
     return status === 'Active' ? 'success' :
