@@ -29,6 +29,11 @@ export default {
       icon: 'icon-pencil',
     },
     {
+      name: 'Items',
+      url: '/Items/Items',
+      icon: 'icon-pencil',
+    },
+    {
       name: 'Typography',
       url: '/theme/typography',
       icon: 'icon-pencil',
