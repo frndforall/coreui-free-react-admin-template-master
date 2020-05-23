@@ -24,7 +24,7 @@ function UserRow(props) {
     //   <td>{item.type}</td>
     //   <td><Link to={itemLink}><Badge color={getBadge(item.status)}>{item.status}</Badge></Link></td>
     // </tr>
-        <td>
+        <Col xs="12" sm="6" md="4">
             <Card>
               <CardHeader>
                   Item Id: <Link to={itemLink}>{item.id}</Link>
@@ -38,7 +38,7 @@ function UserRow(props) {
                 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. */}
               </CardBody>
             </Card>
-            </td>
+            </Col>
   )
 }
 
@@ -57,7 +57,7 @@ class Items extends Component {
                 <i className="fa fa-align-justify"></i> Users <small className="text-muted">example</small>
               </CardHeader>
               <CardBody>
-                <Table responsive hover>
+                
                   {/* <thead>
                     <tr>
                       <th scope="col">id</th>
@@ -67,14 +67,12 @@ class Items extends Component {
                       <th scope="col">status</th>
                     </tr>
                   </thead> */}
-                  <tbody>
-                    <tr>
+                  <Row>
                     {itemList.map((item, index) =>
                       <UserRow key={index} item={item}/>
                     )}
-                    </tr>
-                  </tbody>
-                </Table>
+                   </Row> 
+                 
               </CardBody>
             </Card>
           </Col>
