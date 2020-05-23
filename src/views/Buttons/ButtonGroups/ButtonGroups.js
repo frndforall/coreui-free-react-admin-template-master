@@ -24,6 +24,7 @@ class ButtonGroups extends Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.display = this.display.bind(this);
     this.state = {
       dropdownOpen: new Array(2).fill(false),
     };
@@ -34,6 +35,10 @@ class ButtonGroups extends Component {
     this.setState({
       dropdownOpen: newArray,
     });
+  }
+
+  display() {
+    console.log(' button clicked');
   }
 
   render() {
@@ -52,7 +57,7 @@ class ButtonGroups extends Component {
               </CardHeader>
               <CardBody>
                 <ButtonGroup>
-                  <Button>Left</Button>
+                  <Button onClick ={this.display}>Left</Button>
                   <Button>Middle</Button>
                   <Button>Right</Button>
                 </ButtonGroup>
