@@ -82,7 +82,7 @@ class TemplateDetails extends React.Component {
       (result)=>{  
         console.log(result);
           this.setState({  
-              meetupData:result, 
+              meetupData:JSON.parse(JSON.stringify(result)),
               isLoading: false
           });  
       },  
@@ -100,10 +100,10 @@ class TemplateDetails extends React.Component {
                 <Col lg={6}>
                   <Card>
                     <CardHeader>
-                      {/* <strong><i className="icon-info pr-1"></i>Item id: {this.props.params._id}</strong> */}
+                      <strong><i className="icon-info pr-1"></i>Meetup Name: {meetupData.title}</strong>
                     </CardHeader>
                     <CardBody>
-                        <Table responsive striped hover>
+                        {/* <Table responsive striped hover>
                          
                           <tbody>
                             {
@@ -111,12 +111,7 @@ class TemplateDetails extends React.Component {
                                 return (
                                   <tr key={key}>
                                     <td >{`${key}:`}</td>
-                                    {/* if(value.isArray) {
-                                      <td> Array of values</td>
-                                    } else {
-                                      <td ><strong>{value}</strong></td>
-                                    } */}
-                                
+                                    <td ><strong>{value}</strong></td>
                                   </tr>
                                 )
                               })
@@ -125,7 +120,19 @@ class TemplateDetails extends React.Component {
 
                           </tbody>
                           
-                        </Table>
+                        </Table> */}
+                        <img src={meetupData.image} width = '50' height = '50'></img><br/>
+                        Description : {meetupData.description}<br/>
+                        Short Info  : {meetupData.shortInfo} <br />
+                        {/* Category    : {meetupData.category} */}
+                        People Count: {meetupData.joinedPeopleCount}<br />
+                      
+                        Meetup From: {meetupData.timeFrom}<br />
+                        Meetup To: {meetupData.timeTo}
+                    
+                        
+
+
                     </CardBody>
                   </Card>
                 </Col>
