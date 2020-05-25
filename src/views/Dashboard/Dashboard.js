@@ -528,7 +528,8 @@ class Dashboard extends Component {
                 <div>Members online</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Line data={cardChartData1} options={cardChartOpts1} height={70} />
+                {/* <Line data={cardChartData1} options={cardChartOpts1} height={70} /> */}
+                <Bar data={cardChartData3} options={cardChartOpts3} height={70} />
               </div>
             </Card>
           </Col>
@@ -576,7 +577,7 @@ class Dashboard extends Component {
                 <div>Members online</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
+              <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
               </div>
             </Card>
           </Col>
@@ -602,7 +603,7 @@ class Dashboard extends Component {
                   </Col>
                 </Row>
                 <div className="chart-wrapper" style={{ height: 300 + 'px', marginTop: 40 + 'px' }}>
-                  <Line data={mainChart} options={mainChartOpts} height={300} />
+                  <Bar data={mainChart} options={mainChartOpts} height={300} />
                 </div>
               </CardBody>
               <CardFooter>

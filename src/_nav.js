@@ -23,11 +23,11 @@ export default {
       url: '/theme/colors',
       icon: 'icon-drop',
     },
-    {
-      name: 'Template',
-      url: '/theme/template',
-      icon: 'icon-pencil',
-    },
+    // {
+    //   name: 'Template',
+    //   url: '/theme/template',
+    //   icon: 'icon-pencil',
+    // },
     {
       name: 'Items',
       url: '/Items/Items',
