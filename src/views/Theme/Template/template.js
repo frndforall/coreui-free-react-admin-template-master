@@ -88,7 +88,7 @@ class Template extends Component {
           <Col xl={20}>
             <Card>
               <CardHeader>
-                <i className="fa fa-align-justify"></i> Users <small className="text-muted">example</small>
+                <i className="fa fa-align-justify"></i> Meetups
               </CardHeader>
               <CardBody>
                 <Table responsive hover>

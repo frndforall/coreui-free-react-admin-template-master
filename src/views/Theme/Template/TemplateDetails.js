@@ -93,7 +93,10 @@ class TemplateDetails extends React.Component {
   }
 
   render() {
+    // debugger;
     const { meetupData, isLoading } = this.state;
+  
+    // let category = JSON.parse(JSON.stringify(meetupData.category));
     return (
             <div className="animated fadeIn">
               <Row>
@@ -103,33 +106,22 @@ class TemplateDetails extends React.Component {
                       <strong><i className="icon-info pr-1"></i>Meetup Name: {meetupData.title}</strong>
                     </CardHeader>
                     <CardBody>
-                        {/* <Table responsive striped hover>
-                         
-                          <tbody>
-                            {
-                              meetupData.map(([key, value]) => {
-                                return (
-                                  <tr key={key}>
-                                    <td >{`${key}:`}</td>
-                                    <td ><strong>{value}</strong></td>
-                                  </tr>
-                                )
-                              })
-                            }
-
-
-                          </tbody>
-                          
-                        </Table> */}
-                        <img src={meetupData.image} width = '50' height = '50'></img><br/>
+                      
+                        <img src={meetupData.image} width = '500' height = '250'></img><br/>
                         Description : {meetupData.description}<br/>
                         Short Info  : {meetupData.shortInfo} <br />
                         {/* Category    : {meetupData.category} */}
                         People Count: {meetupData.joinedPeopleCount}<br />
                       
                         Meetup From: {meetupData.timeFrom}<br />
-                        Meetup To: {meetupData.timeTo}
-                    
+                        Meetup To: {meetupData.timeTo}<br />
+                        <Card>
+
+                           <strong> Category: {meetupData && meetupData.category && meetupData.category.name}</strong>
+
+                        </Card>
+                        {/* <MeetupUser category={meetupData.category}/> */}
+                        {/* Category : {category.name} */}
                         
 
 
@@ -142,6 +134,14 @@ class TemplateDetails extends React.Component {
 
   }
     
+}
+
+function MeetupUser(props) {
+  return(
+    <Card>
+      Category : {this.props.category.name}
+    </Card>
+  );
 }
 
 export default TemplateDetails
