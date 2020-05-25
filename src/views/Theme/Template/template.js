@@ -10,7 +10,7 @@ const apiUrl = 'http://localhost:3001/api/v1/meetups';
 
 function UserRow(props) {
   const item = props.item
-  const itemLink = `/items/${item.id}`
+  const itemLink = `/template/${item._id}`
 
   const getBadge = (status) => {
     return status === 'Active' ? 'success' :
@@ -19,6 +19,7 @@ function UserRow(props) {
           status === 'Banned' ? 'danger' :
             'primary'
   }
+  console.log(itemLink);
 
   return (
     // <tr key={item.id.toString()}>
@@ -28,6 +29,7 @@ function UserRow(props) {
     //   <td>{item.type}</td>
     //   <td><Link to={itemLink}><Badge color={getBadge(item.status)}>{item.status}</Badge></Link></td>
     // </tr>
+    
         <td>
             <Card>
               <CardHeader>
@@ -41,9 +43,9 @@ function UserRow(props) {
 
 
               {/* Item Status: <Link to={itemLink}><Badge color={getBadge(item.status)}>{item.status}</Badge></Link> */}
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                {/* Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
                 laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. */}
               </CardBody>
             </Card>
             </td>

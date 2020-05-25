@@ -5,12 +5,22 @@ import usersData from './UsersData'
 
 class User extends Component {
 
+
+  constructor(props) {
+    super(props);
+    this.user = usersData.find( user => user.id.toString() === this.props.match.params.id)
+
+    this.userDetails = this.user ? Object.entries(this.user) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
+  }  
+
+  componentDidMount() {
+    console.log(this.user);
+    console.log(this.userDetails);
+}
+
+
   render() {
-
-    const user = usersData.find( user => user.id.toString() === this.props.match.params.id)
-
-    const userDetails = user ? Object.entries(user) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
-
+   
     return (
       <div className="animated fadeIn">
         <Row>
@@ -23,7 +33,7 @@ class User extends Component {
                   <Table responsive striped hover>
                     <tbody>
                       {
-                        userDetails.map(([key, value]) => {
+                        this.userDetails.map(([key, value]) => {
                           return (
                             <tr key={key}>
                               <td>{`${key}:`}</td>

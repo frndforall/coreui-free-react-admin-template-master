@@ -38,6 +38,7 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 const Items = React.lazy(() => import('./views/Items/Items'));
 const Item = React.lazy(() => import('./views/Items/Item'));
+const templateDetails = React.lazy(() => import('./views/Theme/Template/TemplateDetails'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -85,6 +86,7 @@ const routes = [
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/items/:id', exact: true, name: 'Item Details', component: Item },
+  { path: '/template/:id', exact: true, name: 'Meetup Details', component: templateDetails },
 ];
 
 export default routes;
