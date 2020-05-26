@@ -93,10 +93,7 @@ class TemplateDetails extends React.Component {
   }
 
   render() {
-    // debugger;
     const { meetupData, isLoading } = this.state;
-  
-    // let category = JSON.parse(JSON.stringify(meetupData.category));
     return (
             <div className="animated fadeIn">
               <Row>

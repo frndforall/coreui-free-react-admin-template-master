@@ -29,8 +29,7 @@ function UserRow(props) {
     //   <td>{item.type}</td>
     //   <td><Link to={itemLink}><Badge color={getBadge(item.status)}>{item.status}</Badge></Link></td>
     // </tr>
-    
-        <td>
+      
             <Card>
               <CardHeader>
                   Item Id: <Link to={itemLink}>{item.title}</Link>
@@ -48,7 +47,7 @@ function UserRow(props) {
                 ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. */}
               </CardBody>
             </Card>
-            </td>
+            
   )
 }
 
@@ -85,22 +84,13 @@ class Template extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xl={20}>
+          <Col >
             <Card>
               <CardHeader>
                 <i className="fa fa-align-justify"></i> Meetups
               </CardHeader>
               <CardBody>
                 <Table responsive hover>
-                  {/* <thead>
-                    <tr>
-                      <th scope="col">id</th>
-                      <th scope="col">name</th>
-                      <th scope="col">registered</th>
-                      <th scope="col">type</th>
-                      <th scope="col">status</th>
-                    </tr>
-                  </thead> */}
                   <tbody>
                     <tr>
                     {this.state.users.map((item, index) =>
