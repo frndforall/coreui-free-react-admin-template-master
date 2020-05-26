@@ -31,14 +31,17 @@ const Alerts = React.lazy(() => import('./views/Notifications/Alerts'));
 const Badges = React.lazy(() => import('./views/Notifications/Badges'));
 const Modals = React.lazy(() => import('./views/Notifications/Modals'));
 const Colors = React.lazy(() => import('./views/Theme/Colors'));
-const Template = React.lazy(() => import('./views/Theme/Template'));
 const Typography = React.lazy(() => import('./views/Theme/Typography'));
 const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 const Items = React.lazy(() => import('./views/Items/Items'));
 const Item = React.lazy(() => import('./views/Items/Item'));
+const Template = React.lazy(() => import('./views/Theme/Template'));
 const templateDetails = React.lazy(() => import('./views/Theme/Template/TemplateDetails'));
+
+const Meetups = React.lazy(() => import('./views/Meetups'));
+const MeetupDetails = React.lazy(() => import('./views/Meetups/MeetupDetails'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -86,7 +89,9 @@ const routes = [
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/items/:id', exact: true, name: 'Item Details', component: Item },
-  { path: '/template/:id', exact: true, name: 'Meetup Details', component: templateDetails },
+  { path: '/template/:id', exact: true, name: 'Template Details', component: templateDetails },
+  { path: '/meetups', exact: true,  name: 'Meetups', component: Meetups },
+  { path: '/meetup/:id', exact: true, name: 'Meetup Details', component: MeetupDetails },
 ];
 
 export default routes;

@@ -29,6 +29,12 @@ export default {
       icon: 'icon-pencil',
     },
     {
+      name: 'Meetups',
+      url: '/meetups',
+      icon: 'icon-pencil',
+    },
+    
+    {
       name: 'Items',
       url: '/Items/Items',
       icon: 'icon-pencil',

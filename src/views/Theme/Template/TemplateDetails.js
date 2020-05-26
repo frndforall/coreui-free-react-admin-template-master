@@ -115,15 +115,16 @@ class TemplateDetails extends React.Component {
                       
                         Meetup From: {meetupData.timeFrom}<br />
                         Meetup To: {meetupData.timeTo}<br />
-                        <Card>
+                        {/* <Card>
 
                            <strong> Category: {meetupData && meetupData.category && meetupData.category.name}</strong>
 
-                        </Card>
+                        </Card> */}
                         {/* <MeetupUser category={meetupData.category}/> */}
                         {/* Category : {category.name} */}
-                        
-
+                        {/* ({meetupData && meetupData.category && meetupData.category.name})?<MeetupUser category = {meetupData.category}/>:No Category; */}
+                        <MeetupCategory category = {meetupData.category}/>
+                        <MeetupUser user = {meetupData.meetupCreator}/>
 
                     </CardBody>
                   </Card>
@@ -136,12 +137,29 @@ class TemplateDetails extends React.Component {
     
 }
 
-function MeetupUser(props) {
+function MeetupCategory(props) {
   return(
-    <Card>
-      Category : {this.props.category.name}
-    </Card>
+    <div>
+      <strong>Category</strong>
+      <Card>
+        Name: {props.category && props.category.name}<br/>
+        Created at: {props.category && props.category.createdAt}<br/>
+      </Card>
+    </div>
   );
 }
+
+function MeetupUser(props) {
+  return(
+    <div>
+      <strong>User</strong>
+      <Card>
+        Category: {props.user && props.user.name}<br/>
+        <img src={props.user && props.user.avatar} width = '500' height = '250'></img><br/>
+      </Card>
+    </div>
+  );
+}
+
 
 export default TemplateDetails
